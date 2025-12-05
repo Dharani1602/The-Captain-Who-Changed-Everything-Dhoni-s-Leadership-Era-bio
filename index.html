@@ -3,36 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
+
+    <style>
+        body{
+            background-image: url(./image\ for\ index.jpeg);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Lucida;
+        }
+
+        .parent{
+            width: 350px;
+            margin: 5% auto;
+            padding: 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(20px);
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            text-align: center;
+        }
+
+        h1{
+            margin-bottom: 20px;
+        }
+
+        .form-group{
+            margin-bottom: 18px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        input[type="date"],
+        input[type="file"]{
+            width: 100%;
+            padding: 12px;
+            border-radius: 25px;
+            border: 1px solid white;
+            background: transparent;
+            color: white;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        option{
+            color: black;
+        }
+
+        ::placeholder{
+            color: white;
+        }
+
+        .gender,
+        .education{
+            text-align: left;
+            margin-bottom: 18px;
+        }
+
+        .gender label,
+        .education label{
+            margin-right: 12px;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 25px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    <form action="./login.html">
-    <input type="text" placeholder="Enter Name" required/> <br/>
-    <input type="email" placeholder="Enter Email"/> <br/>
-    <input type="password" placeholder="Enter Password"/> <br/>
-    <input type="password" placeholder="Enter Conform password"/> <br/>
-    <h4>Gender</h4>
-    <input type="radio" name="gender"/> Male 
-    <input type="radio" name="gender"/> Female </br>
-    <h4>Education Deatils</h4>
-    <input type="checkbox"/>10th
-    <input type="checkbox"/>Inter
-    <input type="checkbox"/>Diploma
-    <input type="checkbox"/>Btech <br/>
-    <h4>Location</h4>
-    <select>
-        <option value="">Select your city</option>
-        <option value="">Vijayawada</option>
-        <option value="">Hyderabad</option>
-        <option value="">chennai</option> <br/> 
-    </select>
-    <h4>Date Of Birth</h4>
-    <input type="date" placeholder="Date of birth"/> <br/>
-    <h4>Choose File</h4>
-    <input type="file"/> <br/>
-    <button>Submit</button>
+
+    <form class="parent" action="./login.html">
+        <h1>Register</h1>
+
+        <div class="form-group">
+            <input type="text" placeholder="Enter name" required>
+        </div>
+
+        <div class="form-group">
+            <input type="email" placeholder="Enter email" required>
+        </div>
+
+        <div class="form-group">
+            <input type="password" placeholder="Enter password" required>
+        </div>
+
+        <div class="form-group">
+            <input type="password" placeholder="Confirm password" required>
+        </div>
+
+        <div class="gender">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+        </div>
+
+        <div class="form-group">
+            <select required>
+                <option value="">Select your city</option>
+                <option>Vijayawada</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input type="date">
+        </div>
+
+        <div class="education">
+            <label><input type="checkbox"> 10th</label>
+            <label><input type="checkbox"> Inter</label>
+            <label><input type="checkbox"> Diploma</label>
+            <label><input type="checkbox"> B.Tech</label>
+        </div>
+
+        <div class="form-group">
+            <input type="file">
+        </div>
+
+        <button type="submit">Register</button>
     </form>
 
-    
 </body>
 </html>
